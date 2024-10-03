@@ -120,7 +120,7 @@ export default function Component() {
 
       {/* Three.js Canvas */}
       <div style={{ position: 'fixed', top: 50, left: 0, width: '100%', height: '100%', zIndex: 20 }}>
-        <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>
+        <Canvas camera={{ position: [200, 150, 200], fov: 75 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[0, 0, 10]} intensity={1} />
           <Model />
