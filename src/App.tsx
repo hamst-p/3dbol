@@ -29,7 +29,7 @@ export default function Component() {
     let columns = Math.floor(canvas.width / fontSize)
     let drops: number[] = Array(columns).fill(1)
 
-    const matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
+    const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
 
     function draw() {
       if (!ctx || !canvas) return
