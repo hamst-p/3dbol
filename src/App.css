@@ -37,12 +37,20 @@
   }
 }
 
-/* Added CSS */
+/* 追加のCSS */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
   background: #111;
   font-family: Sans-serif;
+  margin: 0; /* 余白をリセット */
+  padding: 0;
+  height: 100%; /* 高さを指定 */
+  overflow-x: hidden; /* 横スクロールを防止 */
+}
+
+html {
+  height: 100%; /* 高さを指定 */
 }
 
 .bol-area {
@@ -57,12 +65,12 @@ body {
   margin-top: 120px;
 }
 
-/* Media query for mobile view */
+/* モバイルビューのメディアクエリ */
 @media (max-width: 768px) {
   .bol-area {
-    font-size: 2.5em; /* Adjust font size for mobile */
-    letter-spacing: -2px; /* Reduce letter spacing for better fit */
-    margin-top: 120px; /* Adjust margin for mobile */
+    font-size: 2.5em; /* フォントサイズを調整 */
+    letter-spacing: -2px; /* レタースペースを調整 */
+    margin-top: 120px; /* マージンを調整 */
   }
 }
 
@@ -89,27 +97,28 @@ body {
   }
 }
 
-/* Footer CSS */
-footer {
-  background-color: #000; /* Ensure visibility */
-  position: absolute; /* or fixed */
+/* フッターのCSS */
+.footer {
+  position: absolute; /* フッターを下部に固定 */
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
+  background-color: #000; /* 背景色を指定 */
   color: #888888;
   font-size: 0.8rem;
-  padding: 1rem;
-  z-index: 30;
-  display: flex; /* Add flexbox for centering */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  padding: 0.5rem;
+  z-index: 50; /* z-indexを上げる */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25px; /* SafariのFlexboxバグを回避 */
 }
 
-/* Media query for mobile view */
+/* モバイルビューのメディアクエリ */
 @media (max-width: 768px) {
-  footer {
-    font-size: 0.6rem; /* Adjust font size for mobile */
-    padding: 0.8rem; /* Adjust padding for better fit */
+  .footer {
+    font-size: 0.6rem; /* フォントサイズを調整 */
+    padding: 0.4rem; /* パディングを調整 */
   }
 }

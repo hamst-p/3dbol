@@ -28,7 +28,7 @@ export default function Component() {
     let drops: number[] = Array(columns).fill(1)
 
     const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
-
+    
     function draw() {
       if (!ctx || !canvas) return
 
@@ -93,7 +93,7 @@ export default function Component() {
   }
 
   return (
-    <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#000' }}>
+    <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', backgroundColor: '#000' }}>
       <canvas ref={matrixCanvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
 
       <header style={{ position: 'absolute', top: 0, width: '100%', zIndex: 10 }}>
@@ -109,22 +109,8 @@ export default function Component() {
         </Canvas>
       </div>
 
-      {/* Footer element */}
-      <footer style={{
-        position: 'absolute', /* or fixed */
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        textAlign: 'center',
-        backgroundColor: '#000',
-        color: '#888888',
-        fontSize: '0.8rem',
-        padding: '1rem',
-        zIndex: 30,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+      {/* フッター要素 */}
+      <footer className="footer">
         © 2024 by Bolana. All rights reserved.
       </footer>
     </div>
