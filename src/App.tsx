@@ -96,7 +96,7 @@ export default function Component() {
     <div style={{ position: 'relative', minHeight: '100vh', width: '100vw', backgroundColor: '#000' }}>
       <canvas ref={matrixCanvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
 
-      <header style={{ position: 'absolute', top: 0, width: '100%', zIndex: 10, backgroundColor: 'transparent' }}>
+      <header style={{ position: 'fixed', top: 0, width: '100%', zIndex: 10, backgroundColor: 'transparent' }}>
         <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60px' }}>
           <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
             <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer' }}>
@@ -123,7 +123,7 @@ export default function Component() {
         <div className="bol-area">Fuck It We Bol</div>
       </header>
 
-      <div style={{ position: 'absolute', top: 100, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 1 }}>
         <Canvas style={{ width: '100vw', height: '100vh' }} camera={{ position: [300, 200, 200], fov: 75 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[0, 0, 10]} intensity={1} />
