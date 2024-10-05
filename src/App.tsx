@@ -111,15 +111,19 @@ export default function Component() {
 
       {/* Footer element */}
       <footer style={{
-        position: 'absolute',
+        position: 'absolute', /* or fixed */
         bottom: 0,
+        left: 0,
         width: '100%',
         textAlign: 'center',
+        backgroundColor: '#000',
         color: '#888888',
         fontSize: '0.8rem',
         padding: '1rem',
         zIndex: 30,
-        backgroundColor: '#000' // Ensure visibility
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}>
         © 2024 by Bolana. All rights reserved.
       </footer>

@@ -92,8 +92,9 @@ body {
 /* Footer CSS */
 footer {
   background-color: #000; /* Ensure visibility */
-  position: relative;
+  position: absolute; /* or fixed */
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   color: #888888;
@@ -103,7 +104,6 @@ footer {
   display: flex; /* Add flexbox for centering */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  margin: 0 auto; /* Ensure it's properly centered */
 }
 
 /* Media query for mobile view */
