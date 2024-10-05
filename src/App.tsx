@@ -18,7 +18,6 @@ export default function Component() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // ウィンドウのサイズに合わせてキャンバスをリサイズ
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -29,7 +28,7 @@ export default function Component() {
     let columns = Math.floor(canvas.width / fontSize)
     let drops: number[] = Array(columns).fill(1)
 
-    const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
+    const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
 
     function draw() {
       if (!ctx || !canvas) return
@@ -69,41 +68,35 @@ export default function Component() {
     }
   }, [])
 
-  // Three.js OBJモデルをレンダリングするModelコンポーネント
   const Model = () => {
-    const obj = useLoader(OBJLoader, '/model.obj')  
+    const obj = useLoader(OBJLoader, '/model.obj')
 
-    // モデルにプラスチック風のマテリアルを適用
     useEffect(() => {
       obj.traverse((child) => {
         if (child instanceof THREE.Mesh) {
-          // 法線を再計算
           child.geometry.computeVertexNormals()
-          // マテリアルをプラスチック風に設定
-          child.material = new THREE.MeshPhongMaterial({ 
+          child.material = new THREE.MeshPhongMaterial({
             color: '#53bba5',
-            shininess: 10, // 光沢度を高めに設定
-            specular: 0xaaaaaa // 鏡面反射色を薄いグレーに設定
+            shininess: 10,
+            specular: 0xaaaaaa
           })
         }
       })
     }, [obj])
 
     return (
-      <primitive 
-        object={obj} 
-        scale={[2, 2, 2]}  // スケールを調整
-        position={[0, 0, 0]}  // 位置を調整
+      <primitive
+        object={obj}
+        scale={[2, 2, 2]}
+        position={[0, 0, 0]}
       />
     )
   }
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#000' }}>
-      {/* Matrix code rain canvas */}
       <canvas ref={matrixCanvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
 
-      {/* 中央のテキスト */}
       <div style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}>
         <h1 
           style={{ 
@@ -118,7 +111,6 @@ export default function Component() {
         </h1>
       </div>
 
-      {/* Three.js Canvas */}
       <div style={{ position: 'fixed', top: 50, left: 0, width: '100%', height: '100%', zIndex: 20 }}>
         <Canvas camera={{ position: [200, 150, 200], fov: 75 }}>
           <ambientLight intensity={0.5} />
@@ -127,6 +119,20 @@ export default function Component() {
           <OrbitControls />
         </Canvas>
       </div>
+
+      {/* フッター要素 */}
+      <footer style={{
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        textAlign: 'center',
+        color: '#888888',
+        fontSize: '0.8rem',
+        padding: '1rem',
+        zIndex: 30
+      }}>
+        © 2024 by Bolana. All rights reserved.
+      </footer>
     </div>
   )
 }
