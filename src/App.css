@@ -62,7 +62,7 @@ body {
   .bol-area {
     font-size: 2.5em; /* Adjust font size for mobile */
     letter-spacing: -2px; /* Reduce letter spacing for better fit */
-    margin-top: 60px; /* Adjust margin for mobile */
+    margin-top: 120px; /* Adjust margin for mobile */
   }
 }
 

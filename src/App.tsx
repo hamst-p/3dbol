@@ -5,7 +5,7 @@ import { Canvas, useLoader } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
-import './App.css' // Assuming you'll add the CSS to this file
+import './App.css'
 
 export default function Component() {
   const matrixCanvasRef = useRef<HTMLCanvasElement>(null)
@@ -96,7 +96,6 @@ export default function Component() {
     <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#000' }}>
       <canvas ref={matrixCanvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
 
-      {/* Added Header with area class */}
       <header style={{ position: 'absolute', top: 0, width: '100%', zIndex: 10 }}>
         <div className="bol-area">Fuck It We Bol</div>
       </header>
@@ -110,7 +109,7 @@ export default function Component() {
         </Canvas>
       </div>
 
-      {/* フッター要素 */}
+      {/* Footer element */}
       <footer style={{
         position: 'absolute',
         bottom: 0,
@@ -119,7 +118,8 @@ export default function Component() {
         color: '#888888',
         fontSize: '0.8rem',
         padding: '1rem',
-        zIndex: 30
+        zIndex: 30,
+        backgroundColor: '#000' // Ensure visibility
       }}>
         © 2024 by Bolana. All rights reserved.
       </footer>
