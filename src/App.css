@@ -63,6 +63,7 @@ html {
   animation: blur 0.75s ease-out infinite;
   text-shadow: 0px 0px 5px #53bba5, 0px 0px 7px #53bba5;
   margin-top: 120px;
+  z-index: 0;
 }
 
 /* モバイルビューのメディアクエリ */
