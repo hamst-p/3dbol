@@ -120,7 +120,10 @@ export default function Component() {
               <a href="https://x.com/fuckitwebol" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a></li>
           </ul>
         </nav>
-        <div className="bol-area">Fuck It We Bol</div>
+        <div className="bol-area" style={{ position: 'absolute', top: '500px', width: '100%', zIndex: 10 }}>
+        Fuck It We Bol
+      </div>
+
       </header>
 
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 1 }}>
