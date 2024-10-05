@@ -100,7 +100,7 @@ export default function Component() {
         <div className="bol-area">Fuck It We Bol</div>
       </header>
 
-      <div style={{ position: 'fixed', top: 100, left: 0, width: '100%', height: '100%', zIndex: 20 }}>
+      <div style={{ position: 'fixed', top: 70, left: 0, width: '100%', height: '100%', zIndex: 20 }}>
         {/* Canvasコンポーネントのスタイルを修正して全画面表示にする */}
         <Canvas style={{ width: '100vw', height: '100vh' }} camera={{ position: [300, 200, 200], fov: 75 }}>
           <ambientLight intensity={0.5} />
