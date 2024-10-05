@@ -99,7 +99,7 @@ export default function Component() {
       <header style={{ position: 'fixed', top: 0, width: '100%', zIndex: 10, backgroundColor: 'transparent' }}>
         <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60px' }}>
           <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
-            <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer' }}>
+            <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
               Chart
               <ul className="dropdown">
                 <li><a href="https://dexscreener.com/solana/8eqej7m9banvn96ycizj2o8x3cr8ywmrfcxxjpsmwibc" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Dexscreener</a></li>
@@ -107,23 +107,25 @@ export default function Component() {
                 <li>CoinMarketCap</li>
               </ul>
             </li>
-            <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer' }}>
+            <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
               Swap
               <ul className="dropdown">
                 <li><a href="https://jup.ag/swap/SOL-JDjprgWYuidVGfExWzMp7Z81K3T6Qsg5aJCnG6srRLGW" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Jupiter</a></li>
                 <li><a href="https://raydium.io/swap/?inputMint=sol&outputMint=JDjprgWYuidVGfExWzMp7Z81K3T6Qsg5aJCnG6srRLGW" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Raydium</a></li>
               </ul>
             </li>
-            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer' }}>
-              <a href="https://bol-a-whac.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Play</a></li>
-            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer' }}>
-              <a href="https://x.com/fuckitwebol" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a></li>
+            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
+              <a href="https://bol-a-whac.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Play</a>
+            </li>
+            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
+              <a href="https://x.com/fuckitwebol" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a>
+            </li>
           </ul>
         </nav>
-        <div className="bol-area" style={{ position: 'absolute', top: '500px', width: '100%', zIndex: 10 }}>
-        Fuck It We Bol
-      </div>
 
+        <div className="bol-area" style={{ position: 'absolute', top: '500px', width: '100%', zIndex: 10 }}>
+          Fuck It We Bol
+        </div>
       </header>
 
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 1 }}>
