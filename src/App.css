@@ -36,3 +36,67 @@
     transform: rotate(360deg);
   }
 }
+
+/* Added CSS */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #111;
+  font-family: Sans-serif;
+}
+
+.bol-area {
+  text-align: center;
+  font-size: 4em;
+  color: #fff;
+  letter-spacing: -5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #53bba5, 0px 0px 7px #53bba5;
+  margin-top: 80px;
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #53bba5,
+      0px 0px 10px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 25px #53bba5,
+      0px 0px 50px #53bba5,
+      0px 0px 50px #53bba5,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+/* Footer CSS */
+footer {
+  background-color: #000; /* Ensure visibility */
+  position: relative; /* Allow footer to adjust its position */
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #888888;
+  font-size: 0.8rem;
+  padding: 1rem;
+  z-index: 30;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.6rem; /* Adjust font size for mobile */
+    padding: 0.8rem; /* Adjust padding for better fit */
+  }
+}

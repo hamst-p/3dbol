@@ -1,5 +1,3 @@
-// App.tsx
-
 "use client"
 
 import React, { useEffect, useRef } from 'react'
@@ -7,6 +5,7 @@ import { Canvas, useLoader } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import './App.css' // Assuming you'll add the CSS to this file
 
 export default function Component() {
   const matrixCanvasRef = useRef<HTMLCanvasElement>(null)
@@ -97,19 +96,10 @@ export default function Component() {
     <div style={{ position: 'relative', height: '100vh', width: '100vw', backgroundColor: '#000' }}>
       <canvas ref={matrixCanvasRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
 
-      <div style={{ position: 'absolute', top: '10%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 10 }}>
-        <h1 
-          style={{ 
-            fontSize: '2rem', 
-            fontWeight: 'bold', 
-            color: '#53bba5',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-            whiteSpace: 'nowrap'
-          }}
-        >
-          FUCK IT WE BOL
-        </h1>
-      </div>
+      {/* Added Header with area class */}
+      <header style={{ position: 'absolute', top: 0, width: '100%', zIndex: 10 }}>
+        <div className="bol-area">Fuck It We Bol</div>
+      </header>
 
       <div style={{ position: 'fixed', top: 50, left: 0, width: '100%', height: '100%', zIndex: 20 }}>
         <Canvas camera={{ position: [200, 150, 200], fov: 75 }}>
