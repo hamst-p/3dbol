@@ -137,3 +137,20 @@ html {
     height: 50px; /* 高さを60pxから50pxに変更 */
   }
 }
+
+@media (max-width: 768px) {
+  /* モバイルビューでナビゲーションメニューのスタイルを調整 */
+  nav ul {
+    align-items: center;
+    padding: 30px;
+    margin: 100px;
+  }
+
+  nav ul li {
+    margin: 5px 0; /* メニューアイテムの間に余白を追加 */
+  }
+
+  nav {
+    height: auto; /* 高さを自動調整 */
+  }
+}
