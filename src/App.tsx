@@ -114,11 +114,12 @@ export default function Component() {
                 <li><a href="https://raydium.io/swap/?inputMint=sol&outputMint=JDjprgWYuidVGfExWzMp7Z81K3T6Qsg5aJCnG6srRLGW" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Raydium</a></li>
               </ul>
             </li>
-            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
-              <a href="https://bol-a-whac.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Play</a>
-            </li>
-            <li style={{ margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
-              <a href="https://x.com/fuckitwebol" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a>
+            <li style={{ position: 'relative', margin: '0 40px', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
+              Link
+              <ul className="dropdown">
+                <li><a href="https://x.com/fuckitwebol" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>X</a></li>
+                <li><a href="https://t.co/7UPvwZFZ4h" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Telegram</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -139,7 +140,9 @@ export default function Component() {
       </div>
 
       <footer className="footer">
-        © 2024 by Bolana. All rights reserved.
+        <a href="https://bol-a-whac.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+          © 2024 by Bolana. All rights reserved.
+        </a> 
       </footer>
     </div>
   )
