@@ -27,7 +27,7 @@ export default function Component() {
     let columns = Math.floor(canvas.width / fontSize)
     let drops: number[] = Array(columns).fill(1)
 
-    const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}"
+    const matrix = "壱弌麤齋纛麺藝顯鸞鸚讃鬱顰蠢驫籠纏馨贄黛ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|]}"
     
     function draw() {
       if (!ctx || !canvas) return
@@ -122,11 +122,12 @@ export default function Component() {
             </li>
           </ul>
         </nav>
-
-        <div className="bol-area" style={{ position: 'absolute', top: '500px', width: '100%', zIndex: 10 }}>
-          Fuck It We Bol
-        </div>
       </header>
+
+      {/* bol-area を header の外に移動 */}
+      <div className="bol-area">
+        Fuck It We Bol
+      </div>
 
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 1 }}>
         <Canvas style={{ width: '100vw', height: '100vh' }} camera={{ position: [300, 200, 200], fov: 75 }}>

@@ -49,7 +49,12 @@ html {
   height: 100%;
 }
 
+/* bol-area のスタイルを更新 */
 .bol-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 4em;
   color: #fff;
@@ -58,8 +63,7 @@ html {
   text-transform: uppercase;
   animation: blur 0.75s ease-out infinite;
   text-shadow: 0px 0px 5px #53bba5, 0px 0px 7px #53bba5;
-  margin-top: 0px;
-  z-index: 0;
+  z-index: 2; /* z-index を調整 */
 }
 
 /* モバイルビューのメディアクエリ */
@@ -67,7 +71,7 @@ html {
   .bol-area {
     font-size: 2.5em;
     letter-spacing: -2px;
-    margin-top: 00px;
+    margin-top: 0;
   }
 }
 
@@ -104,53 +108,44 @@ html {
   background-color: #000;
   color: #888888;
   font-size: 0.8rem;
-  padding: 0.5rem; /* パディングを調整 */
+  padding: 0.5rem;
   z-index: 50;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 25px; /* 縦幅を半分に調整 */
+  min-height: 25px;
 }
-
-/* 既存のスタイルはそのまま */
 
 /* モバイルビューのメディアクエリ */
 @media (max-width: 768px) {
-  .bol-area {
-    font-size: 2.5em;
-    letter-spacing: -2px;
-    margin-top: 0;
-  }
-
   /* ヘッダーメニューのテキスト間隔を狭める */
-  .nav-item {
-    margin: 0 10px; /* 元の40pxから20pxに減らす */
+  nav ul li {
+    margin: 0 20px;
   }
 
   /* 必要に応じてフォントサイズを調整 */
-  .nav-item a {
-    font-size: 0.9em; /* フォントサイズを90%に縮小 */
+  nav ul li a {
+    font-size: 0.9em;
   }
 
   /* ナビゲーションバーの高さを調整 */
-  .nav {
-    height: 50px; /* 高さを60pxから50pxに変更 */
+  nav {
+    height: 50px;
   }
-}
 
-@media (max-width: 768px) {
-  /* モバイルビューでナビゲーションメニューのスタイルを調整 */
+  /* ナビゲーションメニューのスタイルを調整 */
   nav ul {
     align-items: center;
-    padding: 30px;
-    margin: 100px;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
   }
 
   nav ul li {
-    margin: 5px 0; /* メニューアイテムの間に余白を追加 */
+    margin: 5px 10px;
   }
 
   nav {
-    height: auto; /* 高さを自動調整 */
+    height: auto;
   }
 }
